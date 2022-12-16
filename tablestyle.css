@@ -320,7 +320,8 @@
         }
 
         div#ez-toc-container p.ez-toc-title {
-            display: contents
+            display: contents;
+            color: #000;
         }
 
         div#ez-toc-container {
