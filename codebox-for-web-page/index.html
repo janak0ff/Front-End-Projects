@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful code box by janak</title>
+    <link rel="stylesheet" href="./prism.css" />
+  </head>
+  <body>
+    <pre><code class="language-html line-numbers  match-braces rainbow-braces" data-prismjs-copy="Copy">
+        &lt;meta charset="utf-8" /&gt;
+        &lt;link rel="icon" href="assets/favicon.png" /&gt;
+        &lt;title&gt;Janak shrestha&lt;/title&gt;
+        &lt;base href="../.." /&gt;
+        &lt;link rel="stylesheet" href="assets/style.css" /&gt;
+        &lt;link rel="stylesheet" href="themes/prism.css" data-noprefix /&gt;
+        &lt;script src="assets/vendor/prefixfree.min.js"&gt;&lt;/script&gt;
+        &lt;style&gt;
+    </code></pre>
+
+    <pre><code class="language-js line-numbers match-braces rainbow-braces" data-prismjs-copy="Copy">
+  function init_pagenation() {
+    var pagescount, i, txt = "", activePage, fromPos, toPos, x, prevPage, nextPage, able = "",abler = "";
+    pagescount = 13;
+    activePage = window.location.pathname;
+    if (activePage.indexOf(".html") == -1) { activePage = "/index.html"; }
+    if (activePage.indexOf("index.html") > -1) {
+        activePage = 1;
+    } else {
+        fromPos = activePage.indexOf("tutorial_page") + 13; //length of tutorial_page
+        toPos = activePage.indexOf(".html");
+        activePage = activePage.substring(fromPos, toPos);
+    }
+    if (activePage == 1) {
+        able = " pagdisabled"
+        prevPage = "index.html"
+    } else if (activePage == 2) {
+        prevPage = "index.html";
+    } else {
+        prevPage = "tutorial_page" + (activePage - 1) + ".html";
+    }
+    if (activePage == pagescount) {
+        nextPage = "tutorial_page13.html"; 
+        abler = " pagdisabled"
+    } else {
+        nextPage = "tutorial_page" + (parseInt(activePage) + 1) + ".html";
+    }
+    x = document.getElementsByClassName("pagenation");
+    for (i = 0; i < x.length; i++) {
+        x[i].innerHTML = txt;
+        x[i].getElementsByClassName("pagenation_item")[activePage].classList.add("pagactive");
+    }
+}
+init_pagenation();
+    </code></pre>
+
+    <pre><code class="language-css line-numbers match-braces rainbow-braces" data-prismjs-copy="Copy">
+.pagenation_item.pagactive {
+    background-color: #04AA6D !important;
+    color: white !important;
+}
+.pagenation_item:hover:not(.pagactive) {
+    background-color: #ddd;
+    color: #000;
+}
+.pagenation_item.pagdisabled,
+.pagenation_item.pagdisabled:hover {
+    background-color: transparent;
+    color: #dddddd;
+    cursor: auto;
+}
+    </code></pre>
+    <script src="./prism.js"></script>
+  </body>
+</html>
