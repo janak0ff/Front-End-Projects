@@ -1,0 +1,269 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* all similar content styling codes */
+section {
+  padding: 10px 0;
+}
+
+/* .max-width {
+  max-width: 1750px;
+  padding: 10px 80px;
+  margin: auto;
+} */
+
+.contact {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  background-image: linear-gradient(0deg,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 67.21%,
+      rgba(255, 255, 255, 0) 100%),
+    linear-gradient(-103.35deg,
+      rgb(215, 252, 254) 3.73%,
+      rgb(251, 213, 250) 56.7%,
+      rgb(254, 224, 213) 100.35%);
+}
+
+.contact .contact-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-top: 30px;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #333;
+  padding-bottom: 15px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif, "Ubuntu", Futura,
+    "Trebuchet MS", Arial, sans-serif;
+}
+
+section .title::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  font-size: 16px;
+  color: rgb(39, 43, 61);
+  transform: translateX(-50%);
+}
+
+
+/* contact section styling */
+.contact .title::after {
+  content: "Don't Hesitate";
+}
+
+.contact .contact-content .column {
+  width: calc(60% - 30px);
+}
+
+.contact .contact-content .text {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.contact .contact-content .left p {
+  text-align: justify;
+}
+
+.contact .contact-content .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-content .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-content .row i {
+  font-size: 25px;
+  color: rgb(41, 77, 196);
+}
+
+.contact .contact-content .info .head {
+  font-weight: 500;
+}
+
+.contact .contact-content .info .sub-title {
+  color: #333;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
+
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif, "Poppins", Futura,
+    "Trebuchet MS", Arial, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button-area {
+  display: flex;
+  align-items: center;
+}
+
+.right form .button-area .button-n {
+  color: #333;
+  width: 100px !important;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+}
+
+.right form .button-area .button-n:active {
+  color: rgb(128, 137, 185);
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button-n {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: #111;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.button-n span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-n svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-n:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button-n:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.button-n:hover span {
+  transform: translateX(5em);
+}
+
+.button-n:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+/* footer section styling */
+footer {
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+}
+
+footer span a {
+  color: skyblue;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: none;
+
+  color: rgb(41, 77, 196);
+}
+
+ /* Apply these styles to the form on screens smaller than 800px wide */
+ @media (max-width: 800px) {
+  .contact .contact-content {
+    flex-wrap: wrap;
+  }
+
+  .contact .contact-content .column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .contact .right form .fields {
+    flex-wrap: wrap;
+  }
+
+  .contact .right form .field,
+  .contact .right form .fields .field {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+
+  .contact .right form .fields .field:last-of-type {
+    margin-right: 0;
+  }
+}
